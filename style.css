@@ -1,0 +1,68 @@
+.list{
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: relative;
+    
+}
+.list:hover{
+    border: 1px solid orange;
+}
+.list::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 40px solid green;
+    border-left: 40px solid transparent;
+    
+}
+.img{
+    width: 255px;
+    height: 255px;
+}
+.list-money{
+    font-size: 18px;
+    color: orange;
+    margin: 10px;
+}
+
+.sale{
+    margin: 0;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+    transform: rotate(45deg);
+    font-size: 11px;
+}
+.item{
+    text-align: center;
+}
+.mua{
+    position: absolute;
+    bottom: 0;
+    background-color: orange;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    color: #fff;
+    display: none;
+}
+@keyframes bomm{
+    from{
+        bottom: -50px;
+        opacity: 0;
+    }
+    to{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+.list:hover .mua{
+    animation: bomm ease-in 0.5s;
+    display: inline-block;
+} 
